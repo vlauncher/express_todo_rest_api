@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended:false }));
 
+
+
+app.use('/', require('./routes/todos'));
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,()=>{
